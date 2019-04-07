@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Utils.BaseClass;
@@ -25,6 +26,7 @@ public class PageURL extends BaseClass {
 		elementUK.click();
 		String URL=js.executeScript("return document.URL").toString();
 	    System.out.println("PageURL----->" + URL);
+	    Assert.assertEquals(URL,"https://www.revolut.com/");
 	}
 
 }
